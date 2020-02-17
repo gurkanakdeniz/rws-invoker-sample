@@ -2,10 +2,13 @@ package com.example.demo.sample;
 
 public class ResponseModel {
 
+    private String name;
+    private String blog;
+
     private String current_user_url;
     private String current_user_authorizations_html_url;
     // blah blah
-   
+
     public String getCurrent_user_url() {
         return current_user_url;
     }
@@ -20,6 +23,22 @@ public class ResponseModel {
 
     public void setCurrent_user_authorizations_html_url(String current_user_authorizations_html_url) {
         this.current_user_authorizations_html_url = current_user_authorizations_html_url;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBlog() {
+        return blog;
+    }
+
+    public void setBlog(String blog) {
+        this.blog = blog;
     }
 
 }

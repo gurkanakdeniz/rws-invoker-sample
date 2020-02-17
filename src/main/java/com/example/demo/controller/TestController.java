@@ -12,6 +12,7 @@ import com.example.demo.sample.RequestPostModel;
 import com.example.demo.sample.RequestRequestParam;
 import com.example.demo.sample.ResponseModel;
 import com.example.demo.sample.ResponsePostModel;
+import com.example.demo.sample.ResponseRequestParam;
 import com.example.demo.sample.TestRestClient;
 import com.rws.invoker.annotation.RestWebService;
 import com.rws.invoker.config.RestWebServiceHandler;
@@ -23,6 +24,9 @@ public class TestController {
 
     @RestWebService
     private TestRestClient testRestClient;
+    
+    @RestWebService
+    private TestRestClient testRestClientasd;
 
     private TestRestClient testRestClient2 = RestWebServiceFactory.newInstance(TestRestClient.class,
             new RestWebServiceHandler() {
@@ -46,7 +50,7 @@ public class TestController {
 
         RequestRequestParam request2 = new RequestRequestParam();
         request2.setPage(2);
-        ResponseModel test2 = testRestClient.testRequestParam(request2);
+        ResponseRequestParam test2 = testRestClient.testRequestParam(request2);
 
         RequestPostModel request3 = new RequestPostModel();
         request3.setJob("jedi");
@@ -61,14 +65,6 @@ public class TestController {
     public String test() {
         testRestClient2.test();
         return "of the jedi";
-    }
-
-    public TestRestClient getTestRestClient() {
-        return testRestClient;
-    }
-
-    public void setTestRestClient(TestRestClient testRestClient) {
-        this.testRestClient = testRestClient;
     }
 
 }

@@ -12,7 +12,7 @@ public interface TestRestClient {
     public ResponseModel testPathVariable(RequestModel request);
     
     @RestWebServiceType(RestWebServiceMethod.GET)
-    public ResponseModel testRequestParam(RequestRequestParam request);
+    public ResponseRequestParam testRequestParam(RequestRequestParam request);
     
     @RestWebServiceType(RestWebServiceMethod.POST)
     public ResponsePostModel testPost(RequestPostModel request);
