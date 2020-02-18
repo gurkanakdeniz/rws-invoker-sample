@@ -1,6 +1,8 @@
 package com.example.demo.sample;
 
-public class ResponseRequestParam {
+import com.rws.invoker.model.RestWebServiceBaseResponse;
+
+public class ResponseRequestParam extends RestWebServiceBaseResponse {
 
     private int page;
     private int per_page;

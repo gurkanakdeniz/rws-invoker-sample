@@ -2,7 +2,9 @@ package com.example.demo.sample;
 
 import java.util.Date;
 
-public class ResponsePostModel {
+import com.rws.invoker.model.RestWebServiceBaseResponse;
+
+public class ResponsePostModel extends RestWebServiceBaseResponse {
     private String name;
     private String job;
     private String id;

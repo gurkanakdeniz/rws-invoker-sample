@@ -1,6 +1,8 @@
 package com.example.demo.sample;
 
-public class ResponseModel {
+import com.rws.invoker.model.RestWebServiceBaseResponse;
+
+public class ResponseModel extends RestWebServiceBaseResponse {
 
     private String name;
     private String blog;
